@@ -11,8 +11,9 @@
     </head>
     <body class="text-center">
         <div>
-            <h1 aria-label="prodotto attuale">Prodotto Attuale</h1>
-            <p aria-label="Descrizione prodotto">
+            <h1>Prodotto Attuale</h1>
+            <p>
+                <!--non devo mettere aria label sennò non lo legge-->
                 Latte Intero 
                 Centrale del Latte
             </p>
@@ -23,17 +24,13 @@
             Scadenza
         </button>
 
-        <a href="productadded.html" aria-label="aggiungi prodotto attuale">
-            <!--Vedi dove mettere aria label e se vengono lette da screen reader-->
-            <button type="button"> 
-                Aggiungi
-            </button>
-        </a>
+        <!--Vedi dove mettere aria label e se vengono lette da screen reader-->
+        <button type="button" onclick="location.href='productadded.html'" aria-label="aggiungi prodotto attuale"> 
+            Aggiungi
+        </button>
    
-        <a href="camera.html">
-            <button type="button" aria-label="nuovo prodotto">
-                Nuovo Prodotto
-            </button>
-        </a>
+        <button type="button" onclick="location.href='camera.html'" aria-label="nuovo prodotto">
+            Nuovo Prodotto
+        </button>
     </body>
 </html>

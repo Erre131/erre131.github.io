@@ -9,25 +9,21 @@
         <script type="application/javascript" src="js/bootstrap.min.js">
         </script>  
     </head>
-    <body>
+    <body class="text-center">
         <div>
-            <h1 aria-label="prodotto attuale">Prodotto Attuale</h1>
-            <p aria-label="Descrizione prodotto">
+            <h1>Prodotto Attuale:</h1>
+            <p>
                 Latte Intero 
                 Centrale del Latte
                 Scadenza: 4 marzo 2025
             </p>
         </div>
-        <a href="productexpadded.html" aria-label="aggiungi prodotto attuale">
-            <!--Vedi dove mettere aria label e se vengono lette da screen reader-->
-            <button type="button"> 
-                Aggiungi
-            </button>
-        </a>
-        <a href="camera.html">
-            <button type="button" aria-label="nuovo prodotto">
-                Nuovo Prodotto
-            </button>
-        </a>
+        <button type="button" onclick="location.href='productexpadded.html'" aria-label="aggiungi prodotto attuale"> 
+            Aggiungi
+        </button>
+        <button type="button" onclick="location.href='camera.html'" aria-label="nuovo prodotto">
+            Nuovo Prodotto
+        </button>
+
     </body>
 </html>
