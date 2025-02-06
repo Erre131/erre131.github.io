@@ -4,32 +4,32 @@
         <title>Prototipo 1 - Prodotto Attuale</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script type="application/javascript" src="js/bootstrap.min.js">
         </script>  
     </head>
     <body class="text-center">
         <div>
-            <h1>Prodotto Attuale</h1>
             <p>
                 <!--non devo mettere aria label sennò non lo legge-->
+                Prodotto Attuale
                 Latte Intero 
                 Centrale del Latte
             </p>
         </div>
 
-        <button type="button" onclick="location.href='cameraexp.html'" aria-label="trova scadenza"> 
+        <button class="big-button" type="button" onclick="location.href='cameraexp.html'" aria-label="trova scadenza"> 
             <!--Vedi quale è meglio-->
             Scadenza
         </button>
 
         <!--Vedi dove mettere aria label e se vengono lette da screen reader-->
-        <button type="button" onclick="location.href='productadded.html'" aria-label="aggiungi prodotto attuale"> 
+        <button class="big-button" type="button" onclick="location.href='productadded.html'" aria-label="aggiungi prodotto attuale"> 
             Aggiungi
         </button>
    
-        <button type="button" onclick="location.href='camera.html'" aria-label="nuovo prodotto">
+        <button class="big-button" type="button" onclick="location.href='camera.html'" aria-label="nuovo prodotto">
             Nuovo Prodotto
         </button>
     </body>
