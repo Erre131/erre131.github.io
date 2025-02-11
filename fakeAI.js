@@ -14,6 +14,8 @@ window.onload = function(){
 function startAI(audiofile, url, msec){
     var audio= new Audio(audiofile);
     audio.play();
+    var playbutton = document.getElementById("play-AI");
+    playbutton.disabled=true;
     setTimeout(
         ()=>{window.location=url},
         msec
