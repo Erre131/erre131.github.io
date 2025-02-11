@@ -11,9 +11,14 @@
     </head>
     <body class="text-center">
         <!--Bottone che fa partire l'audio e il timer-->
-        <button id="play-AI" class="big-button" onclick="startAI('fakeAIexp.mp3','expirationdatefound.html',20000);">
+        <!-- <button id="play-AI" class="big-button" onclick="startAI('fakeAIexp.mp3','expirationdatefound.html',20000);">
             Inizia
-        </button>
-        
+        </button> -->
+        <audio  autoplay hidden>
+            <source src="fakeAIexp.mp3" type="audio/mp3">
+            <script>
+                infoFound("expirationdatefound.html", 20000);
+            </script>
+        </audio>
     </body>
 </html>
