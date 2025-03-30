@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Dialog - Modal confirmation</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#dialog-confirm" ).dialog({
+        resizable: false,
+        height: "auto",
+        width: 400,
+        modal: true,
+        buttons: {
+          "Delete all items": function() {
+            $( this ).dialog( "close" );
+          },
+          Cancel: function() {
+            $( this ).dialog( "close" );
+          }
+        }
+      });
+    } );
+    </script>
+  </head>
+  <body>
+   
+  <div id="dialog-confirm" title="Attenzione i seguenti prodotti sono in scadenza:">
+    <!--Elenco prodotti in scadenza con click per andare a pagina prodotto /pagina prodotti in scadenza/chiudi-->
+    
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+        <div class="product-preview">
+            <h1>Nome prodotto 1</h1>
+            <h2>Scade il : pitipiti</h2>
+            <button>Ignora</button>
+            <button>Vai al prodotto</button>
+            <button aria-roledescription="Vai alla pagina dei prodotti in scadenza">
+                Elenco prodotti in Scadenza
+            </button>
+        </div>
+    </p>
+  </div>
+   
+  <p>Testo pagina attuale</p>
+   
+   
+  </body></html>
+
+   
+    
