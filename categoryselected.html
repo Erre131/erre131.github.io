@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css">  
+        <title>Latticini</title>
+    </head>
+    <body class="text-center">
+        
+        <h1 id="categoryname">Nome categoria:</h1>
+        <div id="preview-list">
+            <!--Si popola con Elenco Schede prodotti della categoria selezionata--> 
+        </div>
+
+        <button class="big-button" type="button" onclick="location.href='productcateg.html' " aria-label="Torna a tutte le categorie">
+            Elenco categorie
+        </button> 
+
+
+        <script type="application/javascript" src="js/bootstrap.min.js"></script>  
+        <script src="fakeAI.js" type="application/javascript"></script>   
+
+        <script>
+            loadCategoryProducts();
+        </script>
+
+        <script src="eventListener.js" type="application/javascript"></script>
+        
+    
+    </body>
+</html>

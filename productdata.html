@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="application/javascript" src="js/bootstrap.min.js"></script>          
+    <script src="fakeAI.js" type="application/javascript"></script>  
+    <title>Pagina Prodotto</title>
+</head>
+<body class="text-center">
+    <h1 id="productname"> 
+        Nome prodotto 
+    </h1>
+        <h2>Quantità:</h2>
+        <h3 id="quantity">
+            unità e portata
+        </h3>
+
+        <h2>Scadenza:</h2>
+        <div id="expirationdate">
+            Scadenze varie
+            <button class="big-button" type="button" onclick="location.href='cameraexp.html' ">
+                Leggi Scadenza
+            </button>
+        </div>
+            
+
+        <h2>Ingredienti:</h2>
+            <p id="ingredients">   </p>
+            <!-- <h3 >I tuoi allergeni:</h3>
+                <p id="myallergens">Latte</p> -->
+            <h3>Allergeni:</h3>
+                <p id="allergens">allergeni</p>
+    <button class="big-button" type="button" onclick="location.href='productcateg.html'" aria-roledescription="Torna alle sottocategorie">
+        Elenco sottocategorie 
+    </button>
+    <button class="big-button" type="button" onclick="location.href='productcateg.html' " aria-roledescription="Torna a tutte le macrocategorie">
+        Elenco categorie
+    </button> 
+    <button class="big-button" type="button" onclick="location.href='index.html' " aria-label="Torna alla Home">
+        Home
+    </button> 
+    <script>
+        loadDataProduct();
+    </script>
+</body>
+</html>
