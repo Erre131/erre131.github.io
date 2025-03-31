@@ -31,7 +31,7 @@ class Product{
     }
 }
 //Array categorie (posizione=id categoria)
-const categorie = ['Cereali e farine', 'Spezie e condimenti', 'Frutta e verdure', 'Latte e derivati', 
+const categorie = ['Cereali e derivati', 'Spezie e condimenti', 'Frutta e verdure', 'Latte e derivati', 
   'Carne pesce uova', 'Prodotti da forno', 'Scatolame', 'Pasti pronti', 'Cibo secco', 'Snack e merendine', 
   'Surgelati', 'Bevande', 'Cibo per bambini', 'Cibo per Animali', 'Cura della persona', 'Farmaci' ];
 
@@ -44,9 +44,13 @@ const p5= new Product('Fettine sottilissime di pollo Aia', '250 grammi', 2, ['En
 const p6= new Product('Insalata iceberg Bonduelle', '200 grammi', 2, ['Entro il 13 aprile 2025'], 'Lattuga iceberg', '', 2);
 const p7= new Product('Mele Fuji', '4 mele', 2, [], 'mele','', 2);
 const p8= new Product('Baguette', '200 grammi', 1, [], 'Semola rimacinata di Grano duro (60%), acqua, farina di GRANO tenerotipo 0,lievito, sale, destrosio.', 'Può contenere tracce di soia, sesamo, latte, lattosio e derivati.', 5);
-const p9= new Product('Coca Cola Original','2 litri',1 ,['Entro il 23 maggio 2028'],'Acqua, zucchero, anidride carbonica, colorante E150d, acidificante acido fosforico, aromi naturali inclusa caffeina','', 11);
-const p10= new Product('Pisellini primavera Findus','700 grammi', 1,['Preferibilmente entro il 3 febbraio 2027'],'Pisellini primavera','',10);
-const p11= new Product('Balsamo lisci effetto seta Pantene Pro-V','200 milligrammi', 1 ,['Preferibilmente entro il 5 giugno 2030'],'','',14 );
+const p9= new Product('Coca Cola Original','2 litri',1 ,['Entro il 23 maggio 2028'],'Acqua, zucchero, anidride carbonica, colorante E150d, acidificante acido fosforico, aromi naturali inclusa caffeina','', 10);
+const p10= new Product('Pisellini primavera Findus','700 grammi', 1,['Preferibilmente entro il 3 febbraio 2027'],'Pisellini primavera','',9);
+const p11= new Product('Balsamo lisci effetto seta Pantene Pro-V','200 milligrammi', 1 ,['Preferibilmente entro il 5 giugno 2030'],'','',13 );
+const p12= new Product('Fusilli numero 34 De Cecco','500 grammi', 1, [], '','Può contenere senape e soia',0);
+const p13= new Product('Arachidi tostate e salate Cameo Snack Friends','500 grammi',1,[],'Olio di semi di girasole, sale', 'Contiene Arachidi, Può contenere frutta a guscio',8);
+const p14= new Product('Tachipirina 1000 mg compresse', '', 1,['Entro il 31 agosto 2032'], 'Paracetamolo','',14)
+
 
 //Metto i prodotti campione in una lista String nomemarca:Product datidelprodotto
 const campionario = new Map();
@@ -61,6 +65,8 @@ campionario.set(p7.name, p7);
 campionario.set(p8.name, p8);
 campionario.set(p9.name, p9);
 campionario.set(p10.name, p10);
+campionario.set(p11.name, p11);
+campionario.set(p12.name, p12);
 
 
 //Definisce la struttura della finestra di notifica per prodotto in scadenza
