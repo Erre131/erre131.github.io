@@ -31,24 +31,24 @@ class Product{
     }
 }
 //Array categorie (posizione=id categoria)
-const categorie = ['Cereali e derivati', 'Spezie e condimenti', 'Frutta e verdure', 'Latte e derivati', 
-  'Carne pesce uova', 'Prodotti da forno', 'Scatolame', 'Pasti pronti', 'Cibo secco', 'Snack e merendine', 
+const categorie = ['Cereali e derivati', 'Spezie e condimenti', 'Frutta e Verdure', 'Latte e derivati', 
+  'Carne Pesce Uova', 'Prodotti da forno', 'Scatolame', 'Pasti pronti', 'Cibo secco', 'Snack e merendine', 
   'Surgelati', 'Bevande', 'Cibo per bambini', 'Cibo per Animali', 'Cura della persona', 'Farmaci' ];
 
 //Creo i prodotti campione
-const p1= new Product('Latte intero Centrale del Latte', "1 litro", 2, ["Entro il 2 marzo 2025", "Entro il 23 aprile 2025"], "Latte", "Contiene latte", 3);
-const p2= new Product('Burro tradizionale del Piemonte Terre d\'Italia', '250 grammi', 1, ['Preferibilmente entro il 27 aprile 2025'], 'Panna fresca di centrifuga (latte)','Contiene latte', 3);
-const p3= new Product('Grana Padano DOP 16 mesi grattugiato', '100 grammi', 1, [], 'Latte, sale, caglio, lisozima d\'uovo (conservante)', 'Contiene Uova, Latte', 3);
-const p4= new Product('Pesto alla Genovese DOP Barilla', '190 grammi', 1, [], 'olio oliva, olio girasole, basilico fresco 30%, anacardi, parmigiano reggiano DOP 5% (latte), fibra di mais, siero di latte in polvere, sale, proteine del latte, olio extra vergine di oliva, zucchero, estratto di basilico, aromi naturali (latte), correttore di acidità: acido lattico, aglio. Può contenere tracce di altra fturra a guscio.', 'Contiene anacardi, latte, Potrebbe contenere Frutta a guscio', 1);
-const p5= new Product('Fettine sottilissime di pollo Aia', '250 grammi', 2, ['Entro il 4 aprile 2025'], '','', 4);
-const p6= new Product('Insalata iceberg Bonduelle', '200 grammi', 2, ['Entro il 13 aprile 2025'], 'Lattuga iceberg', '', 2);
-const p7= new Product('Mele Fuji', '4 mele', 2, [], 'mele','', 2);
-const p8= new Product('Baguette', '200 grammi', 1, [], 'Semola rimacinata di Grano duro (60%), acqua, farina di GRANO tenerotipo 0,lievito, sale, destrosio.', 'Può contenere tracce di soia, sesamo, latte, lattosio e derivati.', 5);
-const p9= new Product('Coca Cola Original','2 litri',1 ,['Entro il 23 maggio 2028'],'Acqua, zucchero, anidride carbonica, colorante E150d, acidificante acido fosforico, aromi naturali inclusa caffeina','', 10);
-const p10= new Product('Pisellini primavera Findus','700 grammi', 1,['Preferibilmente entro il 3 febbraio 2027'],'Pisellini primavera','',9);
-const p11= new Product('Balsamo lisci effetto seta Pantene Pro-V','200 milligrammi', 1 ,['Preferibilmente entro il 5 giugno 2030'],'','',13 );
-const p12= new Product('Fusilli numero 34 De Cecco','500 grammi', 1, [], '','Può contenere senape e soia',0);
-const p13= new Product('Arachidi tostate e salate Cameo Snack Friends','500 grammi',1,[],'Olio di semi di girasole, sale', 'Contiene Arachidi, Può contenere frutta a guscio',8);
+const p1= new Product('Latte intero Centrale del Latte', "1 litro", 2, ["Entro il 7 aprile 2025", "Entro il 23 aprile 2025"], "Latte", "Contiene latte", 3);
+const p2= new Product('Burro tradizionale del Piemonte Terre d\'Italia', '250 grammi', 1, ['Preferibilmente entro il 27 aprile 2025'], 'Panna fresca di centrifuga (latte)','Contiene LATTE', 3);
+const p3= new Product('Grana Padano DOP 16 mesi grattugiato', '100 grammi', 1, ['Preferibilmente entro il 26 aprile 2025'], 'Latte, sale, caglio, lisozima d\'uovo (conservante)', 'Contiene UOVA, LATTE', 3);
+const p4= new Product('Pesto alla Genovese DOP Barilla', '190 grammi', 1, ['Entro il 5 novembre 2025'], 'olio oliva, olio girasole, basilico fresco 30%, ANACARDI, parmigiano reggiano DOP 5% (LATTE), fibra di mais, siero di LATTE in polvere, sale, proteine del LATTE, olio extra vergine di oliva, zucchero, estratto di basilico, aromi naturali (LATTE), correttore di acidità: acido lattico, aglio. Può contenere tracce di altra frutta a guscio.', 'Contiene ANACARDI, LATTE, Può contenere FRUTTA A GUSCIO', 1);
+const p5= new Product('Fettine sottilissime di pollo Aia', '250 grammi', 2, ['Entro il 4 aprile 2025','Scadenza assente'], 'Pollo','POLLO', 4);
+const p6= new Product('Insalata iceberg Bonduelle', '200 grammi', 2, ['Entro il 27 marzo 2025','Entro il 10 aprile 2025'], 'Lattuga iceberg', 'LATTUGA', 2);
+const p7= new Product('Mele Fuji', '4 mele', 2, ['Scadenza assente'], 'mele','', 2);
+const p8= new Product('Baguette', '200 grammi', 1, ['Entro 3 giorni dall\'apertura'], 'Semola rimacinata di Grano duro (60%), acqua, farina di GRANO tenerotipo 0,lievito, sale, destrosio.', 'Può contenere tracce di SOIA, SESAMO, LATTE, LATTOSIO.', 5);
+const p9= new Product('Coca Cola Original','2 litri',1 ,['Entro il 23 maggio 2028'],'Acqua, zucchero, anidride carbonica, colorante E150d, acidificante acido fosforico, aromi naturali inclusa caffeina','CARAMELLO E150D', 10);
+const p10= new Product('Pisellini primavera Findus','700 grammi', 1,['Preferibilmente entro il 3 febbraio 2027'],'Pisellini primavera','PISELLI',9);
+const p11= new Product('Balsamo lisci effetto seta Pantene Pro-V','200 milligrammi', 1 ,['Preferibilmente entro il 5 giugno 2030'],'Acqua, Sodium lauryl sulfato, dimethicone, glycol distearato, provitamina B5, acido citrico, cloridio di sodio, PROFUMO','PROFUMO',12 );
+const p12= new Product('Fusilli numero 34 De Cecco','500 grammi', 1, ['Preferibilmente entro il 2 dicembre 2035'], 'Semola di grano duro, Acqua','Può contenere SENAPE e SOIA',0);
+const p13= new Product('Arachidi tostate e salate Cameo Snack Friends','500 grammi',1,['Preferibilmente entro il 4 gennaio 2027'],'ARACHIDI, Olio di semi di girasole, sale', 'Contiene ARACHIDI, Può contenere FRUTTA A GUSCIO',8);
 const p14= new Product('Tachipirina 1000 mg compresse', '', 1,['Entro il 31 agosto 2032'], 'Paracetamolo','',14)
 
 
