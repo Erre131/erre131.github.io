@@ -32,7 +32,7 @@ class Product{
 }
 //Array categorie (posizione=id categoria)
 const categorie = ['Cereali e derivati', 'Spezie e condimenti', 'Frutta e Verdure', 'Latte e derivati', 
-  'Carne Pesce Uova', 'Prodotti da forno', 'Scatolame', 'Pasti pronti', 'Cibo secco', 'Snack e merendine', 
+  'Carne Pesce Uova', 'Prodotti da forno', 'Scatolame', 'Pasti pronti', 'Snack e merendine', 
   'Surgelati', 'Bevande', 'Cibo per bambini', 'Cibo per Animali', 'Cura della persona', 'Farmaci' ];
 
 //Creo i prodotti campione
