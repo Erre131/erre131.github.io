@@ -29,3 +29,33 @@ btns.forEach(button =>
   
           });
   });
+
+  
+//Definisce la struttura della finestra di notifica per prodotto in scadenza
+$( function() {
+    $( "#exp-notification" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Visualizza prodotto": function() {
+          $( this ).dialog( "close" );
+          //salva il prodotto come selectedProduct nel localStorage
+          let prodcliccato = document.getElementById('exp-product-name').innerHTML;
+          localStorage.setItem('selectedProduct', prodcliccato);
+          //va nella pagina coi dati del prodotto
+          window.location = 'productdata.html';
+        },
+        "Lista prodotti in scadenza": function(){
+          $( this ).dialog( "close" );
+          window.location = 'expiredproductlist.html';
+        },
+        Chiudi: function() {
+          $( this ).dialog( "close" );
+          window.history.go(-1);
+        }
+      }
+    });
+  } );
+  

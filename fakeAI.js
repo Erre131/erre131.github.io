@@ -69,34 +69,6 @@ campionario.set(p11.name, p11);
 campionario.set(p12.name, p12);
 
 
-//Definisce la struttura della finestra di notifica per prodotto in scadenza
-$( function() {
-  $( "#exp-notification" ).dialog({
-    resizable: false,
-    height: "auto",
-    width: 400,
-    modal: true,
-    buttons: {
-      "Visualizza prodotto": function() {
-        $( this ).dialog( "close" );
-        //salva il prodotto come selectedProduct nel localStorage
-        let prodcliccato = document.getElementById('exp-product-name').innerHTML;
-        localStorage.setItem('selectedProduct', prodcliccato);
-        //va nella pagina coi dati del prodotto
-        window.location = 'productdata.html';
-      },
-      "Lista prodotti in scadenza": function(){
-        $( this ).dialog( "close" );
-        window.location = 'expiredproductlist.html';
-      },
-      Chiudi: function() {
-        $( this ).dialog( "close" );
-      }
-    }
-  });
-} );
-
-
 //Per andare nella pagina indicata nell'url dopo aver "usato l'AI per individuare qualcosa" 
 //(quindi dopo che l'AI simulata ha finito di parlare dopo tot msec)
 // function infoFound(url,msec){
@@ -126,11 +98,14 @@ function expNotify(){
   //setta timer randomico dopo il quale far partire la notifica
   let randtime = Math.floor(Math.random() * 30000);
   setTimeout(
-            ()=>{
-              //aggiungi popup alla pagina
-              document.body.innerHTML += '<div id="exp-notification" title="Attenzione i seguenti prodotti sono in scadenza:"><p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span><div class="product-preview"><h1 id="exp-product-name">Latte intero Centrale del Latte</h1><h2>Scade il 3 aprile 2025 </h2></div></p></div>';
-            },
-            10000
+            ()=>{window.location='expnotification.html'},
+              //aggiungi popup alla pagina =non funziona non prende la grafica popup jquery
+            //   document.body.innerHTML += '<div id="exp-notification" title="Attenzione i seguenti prodotti sono in scadenza:"><p id="p-notification"></p></div>';
+            //   p=document.getElementById('p-notification');
+            //   p.innerHTML+='<span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span><div class="product-preview"><h1 id="exp-product-name">Latte intero Centrale del Latte</h1><h2>Scade il 3 aprile 2025 </h2></div>';
+            // },
+
+            5000
         );
 }
 
@@ -203,7 +178,6 @@ function loadCategoryProducts(){
     lista.innerHTML = "Nessun prodotto in questa categoria";
     return;
   }
-   
 
   for(let i = 0; i < catproducts.length; i++){
     nome=catproducts[i].name;
