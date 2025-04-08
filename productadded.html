@@ -11,14 +11,30 @@
     </head>
     <body class="text-center">
         <div>
+            <p id="quant-aggiunta">
+            </p>
             <p>
-                Latte Intero Aggiunto alla Dispensa!
+            Latte Intero aggiunto alla dispensa!
             </p>
         </div>
 
+        <div>
+            <!--Bottone incrementale check if  accessibile-->
+            <form action="" id="addUnitsForm">
+                <label for="add-quantity">Aggiungi altre unità di questo prodotto:</label><br>
+                <input type="text" id="add-quantity" name="quantity" inputmode="numeric" pattern="[0-9]*">
+                <button type="submit">Aggiungi</button><br><br>
+            </form>
+        </div>
+        
         <button class="big-button" type="button" onclick="location.href='index.html'" aria-label="Torna alla Home">
             Home
         </button> 
 
+        <button class="product-preview">
+            Prodotto
+        </button>
+
+        <script src="eventListener.js" type="application/javascript"></script>
     </body>
 </html>

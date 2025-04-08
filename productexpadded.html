@@ -13,8 +13,17 @@
             <p>
                 Latte Intero con scadenza 4 aprile 2025 Aggiunto alla Dispensa!
             </p>
+            <div>
+                <!--Aggiungere altre unità stesso prodotto-->
+                <form action="" id="addUnitsForm">
+                    <label for="add-quantity">Aggiungi altre unità di questo prodotto:</label><br>
+                    <input type="text" id="add-quantity" name="quantity" inputmode="numeric" pattern="[0-9]*">
+                    <button type="submit">Aggiungi</button><br><br>
+                </form>
+            </div>
             <button class="big-button" type="button" onclick="location.href='index.html' " aria-label="Torna alla Home">
-             Home
+                Home
             </button> 
+            <script src="eventListener.js" type="application/javascript"></script>
     </body>
 </html>
