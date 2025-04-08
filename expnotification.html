@@ -1,24 +1,50 @@
-<!DOCTYPE html><html lang="en"><head>
+ <!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jQuery UI Dialog - Modal confirmation</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-    <script type="application/javascript" src="js/bootstrap.min.js"></script>  
-    <script src="fakeAI.js" type="application/javascript"></script>   
-    <script src="eventListener.js" type="application/javascript"></script>
-    
+    <script>
+      $( function() {
+    $( "#exp-notification" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Visualizza prodotto": function() {
+          $( this ).dialog( "close" );
+          //salva il prodotto come selectedProduct nel localStorage
+          let prodcliccato = document.getElementById('exp-product-name').innerHTML;
+          localStorage.setItem('selectedProduct', prodcliccato);
+          //va nella pagina coi dati del prodotto
+          window.location = 'productdata.html';
+        },
+        "Lista prodotti in scadenza": function(){
+          $( this ).dialog( "close" );
+          window.location = 'expiredproductlist.html';
+        },
+        Chiudi: function() {
+          $( this ).dialog( "close" );
+          window.history.go(-1);
+        }
+      }
+    });
+  } );
+    </script>
   </head>
   <body>
    
-  <!-- <p>Testo pagina attuale</p> -->
+  <p></p> 
 
   <div id="exp-notification" title="Attenzione i seguenti prodotti sono in scadenza:">
-    <p id="p-notification"><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+    <p id="p-notification">
+        <span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
         <div class="product-preview">
             <h1 id="exp-product-name">Latte intero Centrale del Latte</h1>
-            <h2>Scade il : pitipiti</h2>
+            <h2>Scade il : 7 aprile 2025</h2>
             
         </div>
     </p>
@@ -27,5 +53,3 @@
    
   </body></html>
 
-   
-    
