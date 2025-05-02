@@ -96,7 +96,7 @@ function startAI(audiofile, url, msec){
 //tramite finestra di dialogo popup -> ACCESSIBILE???
 function expNotify(){
   //setta timer randomico dopo il quale far partire la notifica
-  let randtime = Math.floor(Math.random() * 30000);
+  let randtime = Math.floor(Math.random() * 15000);
   setTimeout(
             ()=>{window.location='expnotification.html'},
               //aggiungi popup alla pagina =non funziona non prende la grafica popup jquery
