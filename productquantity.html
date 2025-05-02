@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
-        <title>Prodotto Aggiunto! </title>
+        <title>Selezione quantità prodotto da aggiungere </title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
@@ -15,12 +15,19 @@
             ←
         </button>
         <div>
-            <p id="quant-aggiunta">
-                
+            <p>
+                Prodotto attuale: Latte Intero Centrale del Latte
             </p>
         </div>
 
         <div>
+            <!--Bottone incrementale check if  accessibile-->
+            <form action="" id="addUnitsForm">
+                <label for="add-quantity">Aggiungi altre unità di questo prodotto:</label><br>
+                <input type="text" id="add-quantity" name="quantity" inputmode="numeric" pattern="[0-9]*">
+                <button type="submit">Aggiungi senza scadenza</button><br><br>
+            </form>
+        </div>
         
         <button class="big-button" type="button" onclick="location.href='index.html'" aria-label="Torna alla Home">
             Home
@@ -29,18 +36,6 @@
         <button class="big-button" onclick="location.href='productdata.html'">
             Prodotto
         </button>
-
-        <script>
-            //Scrive quantità aggiunta di prodotto, se vuota allora non scrive
-            quant=document.getElementById("quant-aggiunta");
-            if (localStorage.getItem('addedQuantity')!=null){
-                localStorage.setItem('selectedProduct', 'Latte intero Centrale del Latte');
-                quant.innerHTML=localStorage.getItem('addedQuantity')+" unità di "+localStorage.getItem('selectedProduct')+" aggiunte alla dispensa!";
-            }
-            else{
-                console.log("blee");
-            }
-        </script>
         
         <script src="eventListener.js" type="application/javascript"></script>
     </body>
