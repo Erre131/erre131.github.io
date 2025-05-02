@@ -1,4 +1,6 @@
 //Per raggruppare le funzioni da importare a fine body
+
+
 //event listener, se un bottone con class="product-preview" viene cliccato 
 //Salva il nome e passa alla pagina del prodotto
 const btns=document.querySelectorAll('.product-preview');
@@ -15,7 +17,7 @@ btns.forEach(button =>
 });
 
 
-//event listener, se cliccato bottone con class="" 
+//event listener, se cliccato bottone con class="sub-category" 
   //Salva il nome in catcliccata  e passa a pagina prodotti
   const btns1=document.querySelectorAll('.sub-category');
   btns1.forEach(button => 
@@ -41,14 +43,16 @@ addUnitsForm.addEventListener("submit", (e) => {
   if (quantAdd.value == "" ) {
     alert("Errore nel valore inserito!");
   } else {
-    // vai su pagina productadded è aggiornala con scritto "hai aggiunto tot unità di questo"
-    prodAdd = document.getElementById('quant-aggiunta');
-    prodAdd.innerHTML = quantAdd.value + " unità di"
+    localStorage.setItem('addedQuantity',quantAdd.value);
+    //Aggiungi le unità al prodotto in campionario!!!
+    
+    // vai su pagina productadded che si aggiorna con scritto "hai aggiunto tot unità di questo"
+    window.location = 'productadded.html';
     quantAdd.value="";
   }
 });
 
-  
+
 //Definisce la struttura della finestra di notifica per prodotto in scadenza
 //MESSO IN EXPNOTIFICATION sennò non lo prendeva
 // $( function() {

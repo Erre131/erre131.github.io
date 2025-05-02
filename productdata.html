@@ -15,13 +15,13 @@
     </h1>
         <h2>Quantità:</h2>
         <h3 id="quantity">
-            unità e portata
+            Unità e portata
         </h3>
 
         <h2>Scadenza:</h2>
         <div id="expirationdate">
             Scadenze varie
-            <button class="big-button" type="button" onclick="location.href='cameraexp.html' ">
+            <button class="big-button" type="button" aria-roledescription="Funzione non implementata">
                 Leggi Scadenza
             </button>
         </div>
@@ -43,6 +43,9 @@
     <button class="big-button" type="button" onclick="location.href='index.html' " aria-label="Torna alla Home">
         Home
     </button> 
+    <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-roledescription="Torna alla pagina precedente">
+        Indietro
+    </button>
     <script>
         loadDataProduct();
     </script>

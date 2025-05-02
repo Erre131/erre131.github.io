@@ -11,16 +11,31 @@
 <body class="text-center">
     <h1>Prodotti scaduti:</h1>
     <button class="product-preview" type="button" aria-roledescription="Funzione non ancora implementata">
-        Insalata Iceberg - Scaduta il 27 marzo 2025
+        Insalata Iceberg - Scaduta il 27 aprile 2025
     </button> 
+
+    <button class="product-preview" type="button" onclick="burroCliccato();">
+        Burro tradizionale del Piemonte Terre d\'Italia - Scaduto il 27 aprile 2025
+    </button> 
+
+    <script>
+        function burroCliccato(){
+            localStorage.setItem('selectedProduct', 'Burro tradizionale del Piemonte Terre d\'Italia');
+            window.location = 'productdata.html';
+        }
+       
+    </script>
 
     <h1>Prodotti in scadenza:</h1>
     <button class="product-preview" type="button" aria-roledescription="Funzione non ancora implementata">
-        Latte Intero - In scadenza il 7 aprile 2025
+        Latte Intero - In scadenza il 7 maggio 2025
     </button> 
     
     <button class="big-button" type="button" onclick="location.href='index.html' " aria-label="Torna alla Home">
         Home
     </button> 
+    <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-roledescription="Torna alla pagina precedente">
+        Indietro
+    </button>
 </body>
 </html>

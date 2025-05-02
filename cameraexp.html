@@ -13,7 +13,10 @@
         <!--Bottone che fa partire l'audio e il timer-->
         <button id="play-AI" class="big-button" onclick="startAI('fakeAIexp.mp3','expirationdatefound.html',20000);" aria-roledescription="Clicca per far partire l'AI">
             Inizia identificazione
-        </button> 
+        </button>
+        <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-roledescription="Torna alla pagina precedente">
+            Indietro
+        </button>
 <!--         
         <audio  autoplay hidden>
             <source src="fakeAIexp.mp3" type="audio/mp3">
