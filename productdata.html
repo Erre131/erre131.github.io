@@ -10,6 +10,9 @@
     <title>Pagina Prodotto</title>
 </head>
 <body class="text-center">
+    <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-label="Indietro" aria-roledescription="Torna alla pagina precedente">
+        ←
+    </button>
     <h1 id="productname"> 
         Nome prodotto 
     </h1>
@@ -40,9 +43,7 @@
     <button class="big-button" type="button" onclick="location.href='index.html' " aria-label="Torna alla Home">
         Home
     </button> 
-    <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-roledescription="Torna alla pagina precedente">
-        Indietro
-    </button>
+
     <script>
         loadDataProduct();
     </script>

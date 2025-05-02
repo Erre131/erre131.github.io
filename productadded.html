@@ -11,6 +11,9 @@
         
     </head>
     <body class="text-center">
+        <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-label="Indietro" aria-roledescription="Torna alla pagina precedente">
+            ←
+        </button>
         <div>
             <p id="quant-aggiunta">
                 
@@ -33,9 +36,7 @@
         <button class="big-button" onclick="location.href='productdata.html'">
             Prodotto
         </button>
-        <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-roledescription="Torna alla pagina precedente">
-            Indietro
-        </button>
+
         <script>
             //Scrive quantità aggiunta di prodotto, se vuota allora non scrive
             quant=document.getElementById("quant-aggiunta");

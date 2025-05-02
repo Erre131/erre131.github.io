@@ -8,7 +8,9 @@
         <title>Latticini</title>
     </head>
     <body class="text-center">
-        
+        <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-label="Indietro" aria-roledescription="Torna alla pagina precedente">
+            ←
+        </button>
         <h1 id="categoryname">Nome categoria:</h1>
         <div id="preview-list">
             <!--Si popola con Elenco Schede prodotti della categoria selezionata--> 
@@ -21,9 +23,6 @@
         <button class="big-button" type="button" onclick="location.href='productcateg.html' " aria-label="Torna a tutte le Macrocategorie">
             Macrocategorie
         </button> 
-        <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-roledescription="Torna alla pagina precedente">
-            Indietro
-        </button>
 
 
         <script type="application/javascript" src="js/bootstrap.min.js"></script>  

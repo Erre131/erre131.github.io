@@ -10,6 +10,9 @@
         </script>  
     </head>
     <body class="text-center">
+        <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-label="Indietro" aria-roledescription="Torna alla pagina precedente">
+            ←
+        </button>
         <h1>Prodotto Attuale </h1>
             <p id="product-found-name">
                 <!--non devo mettere aria label sennò non lo legge-->
@@ -29,8 +32,6 @@
         <button class="big-button" type="button" onclick="location.href='camera.html'">
             Nuovo Prodotto
         </button>
-        <button class="big-button" type="button" value="Back" onclick="window.history.go(-1); return false;" aria-roledescription="Torna alla pagina precedente">
-            Indietro
-        </button>
+
     </body>
 </html>
